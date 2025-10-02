@@ -1,69 +1,55 @@
-Discordo – Demo
+🎧 Discordo – Demo
 
-Discordo é uma plataforma de comunicação em tempo real, inspirada no Discord, desenvolvida como projeto de portfólio.
-O sistema permite chamadas de vídeo e áudio P2P, troca de mensagens, gerenciamento de amigos e notificações instantâneas via WebRTC + WebSocket.
+Discordo is a real-time communication platform inspired by Discord, built as a portfolio project.
+It features peer-to-peer audio/video calls, instant messaging, friend management, and live notifications powered by WebRTC and WebSocket.
 
-🎯 Funcionalidades
+🚀 Features
 
-👤 Usuários & Perfis – login, registro, avatares e status online
+Users & Profiles – Registration, login, avatars, and online status
 
-👥 Amizades – adicionar, aceitar/recusar, amigos em comum
+Friendships – Add, accept/decline requests, view mutual friends
 
-📞 Chamadas P2P – áudio/vídeo, controles de mídia e histórico
+P2P Calls – Audio/video calls, media controls, and call history
 
-💬 Mensagens – chat em tempo real com histórico persistente
+Messaging – Real-time chat with persistent history
 
-🎨 UI Moderna – interface responsiva inspirada no Discord
+Modern UI – Responsive interface inspired by Discord
 
-🌐 Notificações em tempo real – chamadas, mensagens e solicitações
+Instant Notifications – For calls, messages, and friend requests
 
-🖼️ Demonstração
-
-## 🔐 Autenticação
-
-### Tela de Login
+🔐 Authentication
+Login Screen
 ![Login](Discordo-DEMO/login.png)
 
-### Tela de Cadastro
+Registration Screen
 ![Cadastro](Discordo-DEMO/Cadastro.png)
 
-## 🏠 Dashboard & Lista de Amigos
-
-### Dashboard Principal
+🏠 Dashboard & Friends
+Main Dashboard
 ![Dashboard](Discordo-DEMO/dashboard.png)
 
-### Perfil do Usuário
+User Profile
 ![Perfil](Discordo-DEMO/perfil.png)
 
-## 📞 Chamadas em Vídeo P2P
+📞 Peer-to-Peer Video Calls
+Starting a Call
+![Fazendo Ligação](Discordo-DEMO/ligacao_fazendo.png)
 
-### Iniciando uma Chamada
-![Fazendo Ligação](Discordo-DEMO/ligação fazendo.png)
-
-### Recebendo uma Chamada
-![Recebendo Ligação](Discordo-DEMO/ligação recebendo.png)
-
-### Chamada em Andamento
+Receiving a Call
+![Recebendo Ligação](Discordo-DEMO/ligacao_ecebendo.png)
+Active Call
 ![Chamada Ativa](Discordo-DEMO/call.png)
 
-## 💬 Mensagens em Tempo Real
-
-### Interface de Chat
+💬 Real-Time Messaging
+Chat Interface
 ![Chat](Discordo-DEMO/chat.png)
 
+🛠️ Tech Stack
 
-🛠️ Tecnologias
+Backend: Django, Django REST Framework, Django Channels
 
-Backend: Django + Django REST Framework + Django Channels
+Frontend: WebRTC, HTML5, CSS3, Vanilla JS, Bootstrap
 
-Frontend: WebRTC, HTML5, CSS3, JS Vanilla, Bootstrap
+Database: PostgreSQL / SQLite (development)
 
-Banco de Dados: PostgreSQL / SQLite (dev)
-
-Infraestrutura: Redis, Docker, Railway/Heroku
-
-🏗️ Arquitetura
-Frontend (WebRTC)  ⇆  Django API (REST)  ⇆  WebSocket (Channels)
-        │                         │                    │
-        └────────── PostgreSQL ───┘                    │
-                              └───────────── Redis ────┘
+Infrastructure: Redis, Docker, Railway/Heroku
