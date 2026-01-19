@@ -82,6 +82,8 @@ Toda a comunicação em tempo real é baseada em WebRTC e WebSocket, garantindo 
 ## Demonstração Visual
 
 ### Autenticação
+Página de inicio  
+![Home de acesso](./home.png)
 
 Login  
 ![Tela de login](./login.png)
@@ -105,7 +107,6 @@ Convite para servidor
 ### Chamadas
 
 Início de chamada  
-![Início de chamada](./home.png)
 
 Recebimento de chamada  
 ![Recebimento de chamada](./friends.png)
