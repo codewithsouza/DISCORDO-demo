@@ -1,55 +1,287 @@
-🎧 Discordo – Demo
+KyVoice – Real-Time Communication Platform
 
-Discordo is a real-time communication platform inspired by Discord, built as a portfolio project.
-It features peer-to-peer audio/video calls, instant messaging, friend management, and live notifications powered by WebRTC and WebSocket.
+KyVoice é uma plataforma de comunicação em tempo real desenvolvida para oferecer chamadas de áudio e vídeo de alta qualidade, comunicação em grupo via servidores, compartilhamento de tela e mensagens instantâneas.
 
-🚀 Features
+O projeto foi criado com foco em escalabilidade, baixa latência e arquitetura moderna, servindo tanto como demonstração de portfólio full-stack quanto como base sólida para produtos comerciais, plataformas corporativas ou soluções educacionais.
 
-Users & Profiles – Registration, login, avatars, and online status
+Visão Geral
 
-Friendships – Add, accept/decline requests, view mutual friends
+KyVoice permite comunicação síncrona e assíncrona por meio de:
 
-P2P Calls – Audio/video calls, media controls, and call history
+Chamadas diretas (1-para-1)
 
-Messaging – Real-time chat with persistent history
+Salas de voz e vídeo com múltiplos participantes
 
-Modern UI – Responsive interface inspired by Discord
+Compartilhamento de tela em tempo real
 
-Instant Notifications – For calls, messages, and friend requests
+Chat integrado às chamadas
 
-🔐 Authentication
-Login Screen
-![Login](Discordo-DEMO/login.png)
+Sistema de usuários, amizades e servidores
 
-Registration Screen
-![Cadastro](Discordo-DEMO/Cadastro.png)
+Notificações em tempo real
 
-🏠 Dashboard & Friends
-Main Dashboard
-![Dashboard](Discordo-DEMO/dashboard.png)
+Toda a comunicação em tempo real é baseada em WebRTC e WebSocket, garantindo desempenho e experiência fluida ao usuário.
 
-User Profile
-![Perfil](Discordo-DEMO/perfil.png)
+Funcionalidades
+Usuários e Perfis
 
-📞 Peer-to-Peer Video Calls
-Starting a Call
-![Fazendo Ligação](Discordo-DEMO/ligacao_fazendo.png)
+Registro e autenticação
 
-Receiving a Call
-![Recebendo Ligação](Discordo-DEMO/ligacao_ecebendo.png)
-Active Call
-![Chamada Ativa](Discordo-DEMO/call.png)
+Perfis personalizáveis (avatar, bio e banner)
 
-💬 Real-Time Messaging
-Chat Interface
-![Chat](Discordo-DEMO/chat.png)
+Status de presença (online, offline, em chamada)
 
-🛠️ Tech Stack
+Preferências de áudio, vídeo e privacidade
 
-Backend: Django, Django REST Framework, Django Channels
+Sistema de Amizades
 
-Frontend: WebRTC, HTML5, CSS3, Vanilla JS, Bootstrap
+Envio, aceitação e recusa de solicitações
 
-Database: PostgreSQL / SQLite (development)
+Lista de amigos
 
-Infrastructure: Redis, Docker, Railway/Heroku
+Visualização de amigos em comum
+
+Permissões baseadas em relacionamento
+
+Servidores e Salas
+
+Criação e gerenciamento de servidores
+
+Salas de voz e texto
+
+Chamadas com múltiplos participantes
+
+Entrada e saída dinâmica de usuários
+
+Controle básico de participantes
+
+Chamadas em Tempo Real
+
+Chamadas diretas entre usuários
+
+Chamadas em grupo por servidor
+
+Áudio e vídeo em tempo real
+
+Compartilhamento de tela
+
+Controle individual de microfone e câmera
+
+Notificações instantâneas
+
+Histórico de chamadas
+
+Mensagens
+
+Chat em tempo real
+
+Histórico persistente
+
+Marcação de mensagens como lidas
+
+Integração com chamadas e servidores
+
+Interface
+
+Interface responsiva e moderna
+
+Layout inspirado em aplicações de comunicação consolidadas
+
+Experiência consistente em desktop e mobile
+
+Demonstração Visual
+Autenticação
+
+Login
+
+![Tela de login](./login.png)
+
+Cadastro
+
+![Tela de cadastro](./register.png)
+
+Dashboard e Perfil
+
+Dashboard principal
+
+![Dashboard principal](./dashboard.png)
+
+Perfil do usuário
+
+![Perfil do usuário](./config.png)
+
+Servidores
+
+Convite para servidor
+
+![Convite para servidor](./convite_server.png)
+
+Chamadas
+
+Início de chamada
+
+![Início de chamada](./home.png)
+
+Recebimento de chamada
+
+![Recebimento de chamada](./friends.png)
+
+Chamada ativa
+
+![Chamada ativa](./server.png)
+
+Chamada em servidor
+
+![Chamada em servidor](./server_call.png)
+
+Transmissão no servidor
+
+![Transmissão no servidor](./transmissão_server.png)
+
+Chat
+
+![Chat](./chat.png)
+Tecnologias Utilizadas
+Backend
+
+Django
+
+Django REST Framework
+
+Django Channels
+
+ASGI (Daphne)
+
+Frontend
+
+JavaScript (Vanilla)
+
+WebRTC
+
+HTML5
+
+CSS3
+
+Bootstrap
+
+Banco de Dados
+
+PostgreSQL (produção)
+
+SQLite (desenvolvimento)
+
+Infraestrutura
+
+Redis
+
+Docker
+
+Gunicorn
+
+Railway / Heroku
+
+Arquitetura
+
+A aplicação segue uma arquitetura desacoplada, separando responsabilidades entre comunicação HTTP e comunicação em tempo real.
+
+Frontend (WebRTC / JS)
+        │
+        ▼
+Django REST API (HTTP)
+        │
+        ▼
+WebSocket Layer (Django Channels)
+        │
+        ├── Redis (gerenciamento de canais)
+        └── PostgreSQL (dados persistentes)
+
+
+Essa abordagem permite escalabilidade horizontal e facilidade de manutenção.
+
+Execução em Ambiente Local
+Pré-requisitos
+
+Python 3.11 ou superior
+
+Redis
+
+Git
+
+Passo a Passo
+git clone <repo>
+cd kyvoice
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+cp env.example .env
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py collectstatic
+python manage.py runserver
+
+
+Aplicação disponível em:
+http://localhost:8000
+
+Deploy em Produção
+Variáveis de Ambiente
+DEBUG=False
+SECRET_KEY=chave-secreta
+DB_NAME=postgres_db
+DB_USER=postgres
+DB_PASSWORD=senha_forte
+DB_HOST=host_do_banco
+REDIS_URL=redis://usuario:senha@host:port
+
+Execução
+gunicorn project.wsgi:application --bind 0.0.0.0:8000
+daphne project.asgi:application --bind 0.0.0.0 --port 8001
+
+API e Comunicação em Tempo Real
+REST API (exemplos)
+POST /accounts/login/
+POST /accounts/register/
+GET  /api/friends/
+POST /api/friend-requests/
+GET  /api/calls/
+POST /api/calls/
+GET  /api/calls/history/
+
+WebSocket
+/ws/voice/{room_id}/
+/ws/notifications/
+
+Segurança
+
+Autenticação obrigatória
+
+Controle de permissões por usuário, amizade e servidor
+
+Validação de dados no backend
+
+Uso recomendado de HTTPS em produção
+
+Aplicações Possíveis
+
+KyVoice pode ser utilizado como base para:
+
+Plataformas de comunicação corporativa
+
+Ferramentas educacionais e EAD
+
+Sistemas de atendimento remoto
+
+Comunidades privadas
+
+Aplicações de videoconferência personalizadas
+
+Status do Projeto
+
+Projeto ativo, com foco em evolução contínua, qualidade de código e boas práticas de arquitetura.
+
+Licença
+
+MIT License
