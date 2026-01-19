@@ -109,8 +109,6 @@ Toda a comunicação em tempo real é baseada em WebRTC e WebSocket, garantindo 
 
 ### Chamadas
 
-#### Início de chamada
-![Início de chamada](./home.png)
 
 #### Recebimento de chamada
 ![Recebimento de chamada](./friends.png)
