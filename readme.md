@@ -82,46 +82,49 @@ Toda a comunicação em tempo real é baseada em WebRTC e WebSocket, garantindo 
 ## Demonstração Visual
 
 ### Autenticação
-Página de inicio  
+
+#### Página de início
 ![Home de acesso](./home.png)
 
-Login  
+#### Login
 ![Tela de login](./login.png)
 
-Cadastro  
+#### Cadastro
 ![Tela de cadastro](./register.png)
 
 ### Dashboard e Perfil
 
-Dashboard principal  
+#### Dashboard principal
 ![Dashboard principal](./dashboard.png)
 
-Perfil do usuário  
+#### Perfil do usuário
 ![Perfil do usuário](./config.png)
 
 ### Servidores
 
-Convite para servidor  
+#### Convite para servidor
 ![Convite para servidor](./convite_server.png)
 
 ### Chamadas
 
-Início de chamada  
+#### Início de chamada
+![Início de chamada](./home.png)
 
-Recebimento de chamada  
+#### Recebimento de chamada
 ![Recebimento de chamada](./friends.png)
 
-Chamada ativa  
+#### Chamada ativa
 ![Chamada ativa](./server.png)
 
-Chamada em servidor  
+#### Chamada em servidor
 ![Chamada em servidor](./server_call.png)
 
-Transmissão no servidor  
+#### Transmissão no servidor
 ![Transmissão no servidor](./transmissão_server.png)
 
 ### Chat
 
+#### Interface de chat
 ![Chat](./chat.png)
 
 ## Tecnologias Utilizadas
