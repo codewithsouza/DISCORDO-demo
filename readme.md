@@ -4,6 +4,8 @@ KyVoice é uma plataforma de comunicação em tempo real desenvolvida para chama
 
 O projeto foi pensado para escalabilidade e arquitetura moderna, servindo tanto como demonstração de portfólio full-stack quanto como base para produtos comerciais, plataformas corporativas ou soluções educacionais.
 
+![Animação do projeto](./Animation.gif)
+
 ## Sumário
 
 - [Visão Geral](#visão-geral)
